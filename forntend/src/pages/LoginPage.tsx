@@ -205,7 +205,7 @@ export default function LoginPage() {
           </div>
         </div>
 
-        {/* Right side with login form */}
+        {/* Right side with login form rammm */}
         <div className="flex flex-col justify-center  p-4 h-[500px] overflow-scroll">
           <div className="mb-8 mt-8">
             <div className="flex items-center gap-2 mb-2">
