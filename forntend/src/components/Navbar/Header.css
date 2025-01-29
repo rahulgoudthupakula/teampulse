@@ -1,0 +1,250 @@
+.header {
+    background-color: #fafafa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  
+  .header-container {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo_search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    
+    border: rgb(0, 0, 0) 1px dashed;
+    border-radius: 50%;
+  }
+  
+  .search-container {
+    position: relative;
+    margin-left: 20px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+  }
+  
+  #main_search {
+    padding: 8px 8px 8px 35px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 250px;
+    
+    transition: width 0.5s ease;
+  }
+  
+  
+  
+  .nav-links {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    height: 35px;
+  }
+  
+  .nav-links li {
+    
+    padding: 5px 10px;
+    
+  }
+
+  .nav-links li:hover {
+    background-color: #f0f0f0;
+    
+    border: 1px rgb(47, 0, 255) solid;
+    border-radius: 20px;
+  }
+
+  .nav-links .active a {
+    
+    color: blue;
+  }
+  .nav-links .active  {
+    background-color: #f0f0f0;
+    
+    border: 1px rgb(47, 0, 255) solid;
+    border-radius: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .right-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 37px;
+    height: 37px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 15px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    
+    
+    
+  }
+ 
+  
+  .profile-pic {
+    cursor: pointer;
+    margin-right: 15px;
+  }
+  
+  .profile-pic img {
+    border-radius: 50%;
+  }
+  
+  
+  .host-button, .business-button, .login-button {
+    background-color: #f0f0f0;
+    height: 35px;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+  }
+  
+  .host-button:hover, .business-button:hover, .login-button:hover, .icon-button:hover{
+    border: 1px rgb(47, 0, 255) solid;
+  }
+  .host-button i, .business-button svg {
+    margin-right: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    .nav-links li {
+      margin: 5px 0;
+      
+    }
+  
+    .right-section {
+      margin-top: 10px;
+    }
+  }
+
+
+  
+
+  .search-focused #main_search {
+    z-index: 100;
+    width: 500px;
+    border-radius: 0%;
+  }
+
+  .headerNav {
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    
+  }
+  
+  .headerNav.hidden, .right-section.hidden {
+    
+    width: 0px;
+    opacity: 0;
+    visibility: hidden;
+    
+  }
+
+  .search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .suggestion-item:hover {
+    background-color: #f0f0f0;
+  }
+
+/* Existing styles... */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -600px;
+  width: fit-content;
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: right 0.6s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.76);
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s ease, visibility 2s ease;
+  z-index: 999;
+}
+
+.sidebar-overlay.active {
+  opacity: 0.3;
+  visibility: visible;
+}
+
+.logout-btn:hover{
+  background-color: rgb(255, 0, 0);
+}
